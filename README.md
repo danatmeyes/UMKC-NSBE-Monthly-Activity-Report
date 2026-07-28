@@ -81,8 +81,6 @@ The Event Details form keeps the information required to prepare a report:
 
 ```text
 worker/index.js              Application interface, seed data, API, and storage logic
-package.json                 Build configuration
-.openai/hosting.example.json Safe deployment-configuration example
 assets/                      Screenshots from the Executive Board User Guide
 ```
 
