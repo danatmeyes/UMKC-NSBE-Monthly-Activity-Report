@@ -1,9 +1,0 @@
-dist/
-node_modules/
-.env
-.env.*
-!.env.example
-.openai/hosting.json
-.DS_Store
-Thumbs.db
-*.log
