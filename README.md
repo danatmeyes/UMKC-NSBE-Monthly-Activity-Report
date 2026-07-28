@@ -2,13 +2,13 @@
 
 ### Executive Board Reporting Tracker · 2026–2027
 
-A shared web application for organizing events, tracking report progress, reviewing event details, and recording Executive Board feedback.
+A shared web application I designed and developed for the UMKC NSBE Executive Board to organize events, track reporting progress, review activity details, and collect feedback in one place.
 
-## [Open the Monthly Activity Report](https://umkc-nsbe-submission-hub.amx42.chatgpt.site)
+## [Open the Live Monthly Activity Report](https://umkc-nsbe-submission-hub.amx42.chatgpt.site)
 
 > **Portfolio visitors:** The link opens the operational tracker. Please view only—do not change statuses, comments, event details, or attachments.
 
-## Project at a Glance
+## Project Overview
 
 | | |
 |---|---|
@@ -18,44 +18,78 @@ A shared web application for organizing events, tracking report progress, review
 | **Reports organized** | 100 |
 | **Technology** | JavaScript, HTML, CSS, Cloudflare Worker, D1, and R2 |
 
-## What I Built
+I transformed a reporting process spread across calendars, forms, files, and conversations into one responsive workspace. The tracker provides full-year and semester progress, event classification, shared saving, supporting-file uploads, and a dedicated Executive Board review workflow.
 
-- Centralized a fragmented reporting process into one shared application.
-- Organized 100 activity reports across Fall 2026 and Spring 2027.
-- Built dashboards for full-year, semester, month, week, status, and programming-lane progress.
-- Added event search, filters, sorting, classification, and source-issue tracking.
-- Created Event Details and Executive Board Comments workflows.
-- Added multiple file uploads, previews, editing, and selective deletion.
-- Supported responsive mobile and desktop layouts, browser history, and shared saving.
-- Added conflict-aware merging to protect updates when multiple people work simultaneously.
+## 1. Dashboard and Reporting Periods
 
-## Quick Guide
+![Dashboard showing reporting totals, status progress, and programming-lane distribution](assets/dashboard.png)
 
-1. **Open the report** using the link above.
-2. **Choose a reporting period:** Full year, Fall 2026, or Spring 2027.
-3. **Find an event** by its name or NSBE ID, or use the filters.
-4. **Review progress** using the dashboard totals and status cards.
-5. **Open Event Details** to review activity information and supporting files.
-6. **Open Executive Board Comments** to review feedback connected to an event.
+- Switch between **Full year**, **Fall 2026**, and **Spring 2027**.
+- Review total reports and the number that are Not Started, Gathering Information, or Submitted.
+- Open programming-lane, semester, month, week, and undated views.
+- Select dashboard totals to open the matching event list.
+
+## 2. Find, Filter, and Classify Events
+
+![Event list with search, filters, programming lanes, statuses, and comment counts](assets/event-list.png)
+
+- Search by event name or NSBE ID.
+- Filter by status, programming lane, subcategory, week, month, or semester.
+- Sort the list and clear filters without losing the master dataset.
+- Classify each activity using Programming Lane and Subcategory controls.
+- Open Event Details or Executive Board Comments directly from the row.
+
+## 3. Review Event Details
+
+![Event Details form with activity information and supporting-file controls](assets/event-details.png)
+
+The Event Details form keeps the information required to prepare a report:
+
+- Event title, NSBE ID, date, duration, and description
+- Audience, attendance, and active NSBE members
+- Cost, sponsorship, partners, focus areas, and event format
+- Pictures, flyers, screenshots, and attendance documents
+
+## 4. Executive Board Comments
+
+![Executive Board Comments form with reviewer details, feedback, and file attachment](assets/executive-board-comments.png)
+
+- Board members can leave event-specific corrections, questions, requests, or approval notes.
+- Comments record the reviewer's name and position.
+- Multiple comments and supporting files can be added to one event.
+- Saved comments can be edited or selectively deleted.
+- Comment counts update in the event list.
 
 ## Submission Status
 
 | Status | Meaning |
 |---|---|
 | **Not Started** | Reporting work has not begun. |
-| **Gathering Information** | The report is being prepared or information is missing. |
+| **Gathering Information** | The report is being prepared or required information is missing. |
 | **Submitted** | Event details and supporting files are complete. |
 
-## Repository Structure
+## What I Engineered
+
+- Reconciled 100 report records across Fall 2026 and Spring 2027.
+- Designed the dashboard, event-list, classification, review, and upload workflows.
+- Built responsive desktop, tablet, and phone layouts.
+- Implemented D1-compatible shared records and R2-compatible file storage.
+- Added route persistence, browser history, shared saving, and conflict-aware record merging.
+- Prepared the project and user documentation for future Executive Boards.
+
+## Source Code
 
 ```text
-worker/index.js              Application interface, data, API, and storage logic
+worker/index.js              Application interface, seed data, API, and storage logic
 package.json                 Build configuration
 .openai/hosting.example.json Safe deployment-configuration example
+assets/                      Screenshots from the Executive Board User Guide
 ```
 
-The public repository contains the application source and original seed schedule. It does not contain saved production comments, uploaded files, or database records.
+The public repository does not contain production database records, saved comments, or uploaded attendance files.
 
 ---
+
+## [View the Live Project](https://umkc-nsbe-submission-hub.amx42.chatgpt.site)
 
 Designed and developed by **Abreham Mesfin** for the **UMKC NSBE Executive Board**.
